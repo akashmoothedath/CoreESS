@@ -1,0 +1,183 @@
+body{
+	width: 77%;
+	min-width: 650px;
+	font-size: 18px;
+	margin: 0px 12%;
+}
+
+/* .editable-bstime .editable-input i.icon-chevron-up:before {
+  content: '\e113';
+}
+.editable-bstime .editable-input i.icon-chevron-down:before {
+  content: '\e114';
+} */
+.editable-bstime .editable-input i.icon-chevron-up,
+.editable-bstime .editable-input i.icon-chevron-down {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.headerImages>img{
+	width: 1100px;
+	height: 150px;
+	padding: 20px;
+	cursor: pointer;
+}
+
+
+.nav li {
+    height: 100%;
+    text-align: center;
+    width: 33%;
+}
+
+.nav {
+    height: 50px;
+    width: 100%;
+}
+
+.navbar-inner {
+    border-radius: 10px;
+    min-height: 30px;
+    text-align: right;
+}
+
+
+.navbar {
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+li>a{
+	cursor: pointer;
+}
+
+.ApprovalTable{
+	padding: 20px 50px 50px 50px;
+}
+
+div[ng-app] { margin: 10px; }
+
+.table {
+	width: 100%
+}
+
+form[editable-form] > div {margin: 10px 0;}
+
+.details{
+	width: 100%;
+}
+
+.details>tbody>tr>td, .details>tbody>tr>th{
+	text-align: center;
+}
+
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus{
+	background-color: #FAFAFA;
+    background-image: linear-gradient(to bottom, #FFFFFF, #F2F2F2);
+	box-shadow: 0 0px 0px rgba(0, 0, 0, 0.00);
+}
+
+.userDetails>ul > li{
+	padding: 5px;
+	
+}
+
+.userDetails > ul {
+	padding-bottom: 20px;
+}
+
+
+.baseContainer{
+	border: 1px solid #D4D4D4;
+	border-radius: 10px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+	margin-top: 25px;
+	padding: 10px 50px 50px 50px;
+}
+
+
+.btn .btn-link{
+	padding: 0px;
+	
+	
+}
+
+.editable-bstime .well-small {
+    padding: 0px !important;
+}
+
+.well-small{
+	width: 25px !important;
+}
+
+
+.editable-bstime .editable-input input[type="text"] {
+    width: 20px !important;
+}
+
+.btn-link{
+	padding: 0px !important;
+}
+
+.editable-input > tbody > tr > td{
+	padding: 0px !important;
+	border: 0 none !important;
+}
+
+.well {
+    background-color: transparent;
+    border: 0px none;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+    margin-bottom: 0px;
+    min-height: 20px;
+    padding: 0px;
+}
+
+.loginheader{
+	margin-top: 10px;
+	height: 40px;
+}
+
+.signout, .loginLabel{
+	align: right;
+	padding-top: 15px;
+	padding-right: 15px;
+}
+
+.signout{
+	cursor: pointer;
+	align: right;
+	padding-top: 15px;
+	padding-right: 15px;
+}
+
+.login_container{
+	width: 40%;
+	background-color: #FAFAFA;
+    background-image: linear-gradient(to bottom, #FFFFFF, #F2F2F2);
+    background-repeat: repeat-x;
+    border: 1px solid #D4D4D4;
+    border-radius: 35px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+    min-height: 40px;
+    padding: 20px;
+    margin-top: 130px;
+    margin-left: 275px;
+}
+
+.login_container > div > .btn-info{
+	margin-top: 10px;
+	
+}
+
+
+.align-left{
+	float: left;
+}

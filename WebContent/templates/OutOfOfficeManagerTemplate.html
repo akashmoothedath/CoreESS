@@ -1,0 +1,15 @@
+<div>
+
+	<accordion>
+		<accordion-group heading="{{approval.Username}}" ng-repeat="approval in ooodata">
+		<div>Start Date: {{approval.Start_Date | date:"MMM-dd-yyyy"}}</div>
+		<div>End Date: {{approval.End_Date}}</div>
+		<div>Duration: {{approval.Duration}} days</div>
+		<div class="buttons">
+				<button class="btn btn-primary" ng-click="approveUser($index)">Approve</button>
+				<button class="btn btn-danger" ng-click="removeUser($index)">Delete</button>
+		</div>
+		</accordion-group>
+	</accordion>
+
+</div>

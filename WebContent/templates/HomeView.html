@@ -1,0 +1,35 @@
+<div class="homeContainer">
+<h3>User Details</h3>
+<div class="userDetails" style="display:inline">
+<ul>
+	<li>Days-Off taken: {{user.daysOffTaken}} days</li>
+	<li>Days-Off remaining: {{user.daysOffRemaining}} days</li>
+	<li>End date: {{user.endDate}}</li>
+	<li>Roll Over from Previous Cycle: {{user.rollOver}} days</li>
+	<li>Manager: {{user.manager}}</li>
+</ul>
+</div>
+<div class="hc-pie" items="limitedIdeas" style="width: 600px; height: 450px; margin: 0 auto display:inline"></div>
+
+<div>
+<h3>Details</h3>
+
+<table class="details table table-striped table-bordered">
+<tbody>
+	<tr>
+		<th>Start Date1</th>
+		<th>End Date</th>
+		<th>Duration (Days)</th>
+		<th>Approved By</th>
+	</tr>
+	
+	<tr>
+		<td>{{user.recentStartDate}}</td>
+		<td>{{user.recentEndDate}}</td>
+		<td>{{user.recentDuration}}</td>
+		<td>{{user.manager}}</td>
+	</tr>
+</tbody>
+</table>
+</div>
+</div>

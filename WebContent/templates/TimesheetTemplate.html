@@ -1,0 +1,66 @@
+<div>
+<table ng-table="tableparams"class="details table table-bordered table-hover table-condensed">
+<tbody>
+	<tr style="font-weight: bold">
+		<th style="width: 130px;">Date</th>
+		<th style="width: 125px;">Start</th>
+		<th>Break 1 (Start)</th>
+		<th>Break 1 (End)</th>
+		<th>Break 2 (Start)</th>
+		<th>Break 2 (End)</th>
+		<th>End of Day (EOD)</th>
+		<th>Action</th>
+	</tr>
+	
+	<tr ng-repeat="timesheet in timesheetdata">
+		<td>
+			 <span editable-bsdate="timesheet.Date" e-name="Date" e-form="rowform" e-datepicker-popup="dd-MMMM-yyyy" e-required>
+          		{{ timesheet.Date | date:"MMM-dd-yyyy"}}
+        	</span>
+		</td>
+		<td>
+			<span editable-bstime="timesheet.Start" e-name="Start" e-form="rowform" e-show-meridian="false" e-minute-step="10" onbeforesave="checkTime($data)">
+          		{{ timesheet.Start | date:"HH:mm"}}
+        	</span>
+		</td>
+		<td><span editable-bstime="timesheet.Break1_Start" e-name="Break1_Start" e-form="rowform" e-show-meridian="false" e-minute-step="10" onbeforesave="checkTime($data)">
+          		{{ timesheet.Break1_Start | date:"HH:mm"}}
+        	</span></td>
+		<td>
+			<span editable-bstime="timesheet.Break1_End" e-name="Break1_End" e-form="rowform" e-show-meridian="false" e-minute-step="10" onbeforesave="checkTime($data)">
+          		{{ timesheet.Break1_End | date:"HH:mm"}}
+
+        	</span>
+		</td>
+		<td>
+			<span editable-bstime="timesheet.Break2_Start" e-name="Break2_Start" e-form="rowform" e-show-meridian="false" e-minute-step="10" onbeforesave="checkTime($data)">
+          		{{ timesheet.Break2_Start | date:"HH:mm"}}
+
+        	</span>
+		</td>
+		<td>
+			<span editable-bstime="timesheet.Break2_End" e-name="Break2_End" e-form="rowform" e-show-meridian="false" e-minute-step="10" onbeforesave="checkTime($data)">
+          		{{ timesheet.Break2_End | date:"HH:mm"}}
+
+        	</span>
+		</td>
+		<td>
+			<span editable-bstime="timesheet.EOD" e-name="EOD" e-form="rowform" e-show-meridian="false" e-minute-step="10" onbeforesave="checkTime($data)">
+          		{{ timesheet.EOD | date:"HH:mm"}}
+        	</span>
+		</td>
+		<td style="white-space: nowrap">
+		<form editable-form name="rowform" onbeforesave="saveRow($data, timesheet.id)" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == timesheet">
+          <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-primary">save</button>
+          <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default">cancel</button>
+        </form>
+		<div class="buttons" ng-show="!rowform.$visible">
+          <button class="btn btn-primary" ng-click="rowform.$show()">edit</button>
+		  <button class="btn btn-danger" ng-click="removeRow($index)">Delete</button>	
+        </div>  
+		</td>
+	</tr>
+</tbody>
+</table>
+	<button class="btn btn-default" ng-click="addRow()">Add row</button>
+</div>

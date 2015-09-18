@@ -1,0 +1,39 @@
+<div ng-controller="baseController">
+<div class="loginheader navbar-inner">
+	<span class="loginLabel">Welcome {{username}}!</span>
+	<span class="signout" ng-click="logout()">Signout</span>
+</div>
+
+<div class="headerImages">
+	<img src="images/CoreEssImage.jpg" alt="Office Management"/>
+</div>
+
+<div class="navbar">
+  <div class="navbar-inner">
+
+    <ul class="nav">
+     <li><a ng-click="home();">Home</a></li>
+     <li><a ng-click="timesheet();">TimeSheet</a></li>
+     <li><a ng-click="outofoffice();">Out of Office</a></li>
+    </ul>
+  </div>
+</div>
+<div ng-if="template == 'Home'" class="baseContainer">
+<homeview></homeview>
+</div>
+
+<div ng-if="template == 'Timesheets'" class="baseContainer">
+<timesheets></timesheets>
+</div>
+
+<div ng-if="template == 'OOOManagerTemplate'" class="baseContainer">
+<ooomanager></ooomanager>
+</div>
+
+
+
+<div ng-if="template == 'OOOEmployeeTemplate'" class="baseContainer">
+<oooemployee></oooemployee>
+</div>
+
+</div>

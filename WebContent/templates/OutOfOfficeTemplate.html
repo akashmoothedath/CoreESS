@@ -1,0 +1,21 @@
+<div>
+<table class="details table table-striped table-bordered ex2">
+<tbody>
+	<tr>
+		<th>Start Date</th>
+		<th>End Date</th>
+		<th>Duration (Days)</th>
+		<th>Employee</th>
+		<th>Status</th>
+	</tr>
+	
+	<tr ng-repeat="approval in ooodata">
+		<td><span>{{approval.Start_Date}}</span></td>
+		<td><span>{{approval.End_Date}}</span></td>
+		<td><span>{{approval.Duration}}</span></td>
+		<td><span>{{approval.Approved_By}}</span></td>
+		<td><span>{{approval.Status}}</span></td>
+	</tr>
+</tbody>
+</table>
+</div>
